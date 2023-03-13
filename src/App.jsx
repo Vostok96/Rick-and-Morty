@@ -5,14 +5,18 @@ import Location from './components/Location'
 import ResidentInfo from './components/ResidentInfo'
 
 function App() {
+  const [locationId, setLocationId] = useState(null);
+  const handleSearch = () => {
+    setLocationId(document.getElementById('location-input').value);
+  }
  
   return (
     <div className="App">
       <div>
-      <input type="text" placeholder='Type a location id ...'/>
-      <button>Search</button>
+      <input type="text" id="location-input" placeholder='Type a location id ...' onChange={() => setLocationId(null)}/>
+      <button onClick={handleSearch}>Search</button>
       </div>
-     <Location/>
+     <Location locationId={locationId}/>
      
     </div>
   )

@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ResidentInfo from "./ResidentInfo";
 
-const Location = () => {
+const Location = ({ locationId }) => {
     
         const [location, setLocation]= useState({})
         const [randomIndex, setRandomIndex] = useState(0);
 
 
         const getRandomId = () => {
-            return Math.floor(Math.random() * 126) + 1;
+            return locationId || Math.floor(Math.random() * 126) + 1;
           };
 
     useEffect(()=>{
@@ -23,7 +23,7 @@ const Location = () => {
             })
             .catch(error => console.error(error))
 
-    },[])    
+    },[locationId])    
     
     return (
         
