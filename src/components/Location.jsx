@@ -30,28 +30,30 @@ const Location = ({ locationId }) => {
 
 
         <div>
-            <div className="name">
-                Nombre : <br />
-                {location.name}
-            </div>
+            <div className="dates"> 
+                <div className="name">
+                    Nombre: <br />
+                    {location.name}
+                </div>
 
 
-            <div className="type">
-                Tipo: <br />
-                {location.type}
-            </div>
+                <div className="type">
+                    Tipo: <br />
+                    {location.type}
+                </div>
 
 
-            <div className="dimension">
-                Dimensión: <br />
-                {location.dimension}
-            </div>
+                <div className="dimension">
+                    Dimensión: <br />
+                    {location.dimension}
+                </div>
 
 
-            <div className="residents">
-                Población: <br />
-                {location.residents?.length}
-                    
+                <div className="residents">
+                    Población: <br />
+                    {location.residents?.length}
+                        
+                </div>
             </div>
 
 

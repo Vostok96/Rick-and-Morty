@@ -12,7 +12,8 @@ function App() {
  
   return (
     <div className="App">
-      <div>
+      <img className='logo' src="./src/assets/logo.svg" alt="" />
+      <div className='searcher'>
       <input type="text" id="location-input" placeholder='Type a location id ...' onChange={() => setLocationId(null)}/>
       <button onClick={handleSearch}>Search</button>
       </div>
