@@ -17,6 +17,7 @@ function App() {
       <input type="text" id="location-input" placeholder='Type a location id ...' onChange={() => setLocationId(null)}/>
       <button onClick={handleSearch}>Search</button>
       </div>
+      <div className='legend'>¡Wellcome to the crazy universe!</div>
      <Location locationId={locationId}/>
      
     </div>
